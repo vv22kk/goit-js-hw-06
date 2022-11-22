@@ -11,23 +11,10 @@ function onFormSubmit(event) {
     email,
     password,
   };
-  const inputCurrentValue =
-    email === '' || password === ''
-      ? alert('Fill all the fields: "Email" and "Password"!')
-      : console.log(FormData);
-  event.currentTarget.reset();
-
-  // if (mail === '' || password === '') {
-  //   alert('Заполните поле');
-  // } else {
-  //   const FormData = {
-  //     mail,
-  //     password,
-  //   };
-  //   console.log(FormData);
-  // }
-  // event.currentTarget.reset();
-
-  // const formData = new FormData(event.currentTarget);
-  // formData.forEach((value, name) => {});
+  if (email === '' || password === '') {
+    alert('Заполните поле');
+  } else {
+    console.log(FormData);
+    event.currentTarget.reset();
+  }
 }
